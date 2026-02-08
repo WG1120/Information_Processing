@@ -1,0 +1,402 @@
+[
+  {
+    "year": "2024",
+    "session": "1회",
+    "number": 1,
+    "category": "소프트웨어 설계",
+    "subcategory": "디자인 패턴",
+    "question": "다음은 디자인 패턴에 대한 설명이다. 각 설명에 해당하는 디자인 패턴의 이름을 쓰시오.\n(1) 객체를 생성하기 위한 인터페이스를 정의하지만, 어떤 클래스의 인스턴스를 생성할지는 서브클래스가 결정하게 하는 패턴\n(2) 복잡한 객체의 생성 과정과 표현 방법을 분리하여 동일한 생성 절차에서 서로 다른 표현 결과를 만들 수 있게 하는 패턴\n(3) 한 객체의 상태가 바뀌면 그 객체에 의존하는 다른 객체들에게 연락이 가고 자동으로 내용이 갱신되는 패턴",
+    "answer": "(1) Factory Method (팩토리 메서드)\n(2) Builder (빌더)\n(3) Observer (옵서버)",
+    "keywords": ["디자인 패턴", "Factory Method", "Builder", "Observer", "생성 패턴", "행위 패턴"]
+  },
+  {
+    "year": "2024",
+    "session": "1회",
+    "number": 2,
+    "category": "데이터베이스",
+    "subcategory": "SQL",
+    "question": "다음 SQL문의 실행 결과를 쓰시오.\n\n[학생] 테이블\n| 학번 | 이름 | 학과 | 성적 |\n|------|------|------|------|\n| 1001 | 홍길동 | 컴퓨터 | 3.5 |\n| 1002 | 김철수 | 전자 | 4.0 |\n| 1003 | 이영희 | 컴퓨터 | 3.8 |\n| 1004 | 박민수 | 전자 | 3.2 |\n| 1005 | 최지영 | 컴퓨터 | 4.5 |\n\nSELECT 학과, COUNT(*) AS 학생수, AVG(성적) AS 평균성적\nFROM 학생\nGROUP BY 학과\nHAVING AVG(성적) >= 3.5;",
+    "answer": "| 학과 | 학생수 | 평균성적 |\n|------|--------|----------|\n| 컴퓨터 | 3 | 3.93 |\n| 전자 | 2 | 3.6 |",
+    "keywords": ["SQL", "GROUP BY", "HAVING", "집계 함수", "COUNT", "AVG"]
+  },
+  {
+    "year": "2024",
+    "session": "1회",
+    "number": 3,
+    "category": "프로그래밍",
+    "subcategory": "C언어",
+    "question": "다음 C 프로그램의 실행 결과를 쓰시오.\n\n#include <stdio.h>\nint main() {\n    int a[5] = {1, 2, 3, 4, 5};\n    int *p = a;\n    int sum = 0;\n    for(int i = 0; i < 5; i++) {\n        sum += *(p + i);\n    }\n    printf(\"%d\\n\", sum);\n    return 0;\n}",
+    "answer": "15",
+    "keywords": ["C언어", "포인터", "배열", "포인터 연산", "반복문"]
+  },
+  {
+    "year": "2024",
+    "session": "1회",
+    "number": 4,
+    "category": "소프트웨어 공학",
+    "subcategory": "테스트",
+    "question": "소프트웨어 테스트에서 화이트박스 테스트 기법 중 다음 설명에 해당하는 커버리지를 쓰시오.\n(1) 프로그램 내의 모든 문장(Statement)이 최소한 한 번은 실행되도록 테스트하는 커버리지\n(2) 프로그램 내의 모든 조건식의 결과가 참(True)과 거짓(False)을 각각 한 번 이상 갖도록 테스트하는 커버리지\n(3) 결정(Decision)의 각 조건식이 다른 조건식에 독립적으로 영향을 미치는 것을 보장하는 커버리지",
+    "answer": "(1) 구문 커버리지 (Statement Coverage)\n(2) 조건 커버리지 (Condition Coverage)\n(3) 변경 조건/결정 커버리지 (MC/DC, Modified Condition/Decision Coverage)",
+    "keywords": ["화이트박스 테스트", "구문 커버리지", "조건 커버리지", "MC/DC", "커버리지", "테스트 기법"]
+  },
+  {
+    "year": "2024",
+    "session": "1회",
+    "number": 5,
+    "category": "네트워크",
+    "subcategory": "프로토콜",
+    "question": "다음 설명에 해당하는 네트워크 프로토콜 또는 기술의 이름을 쓰시오.\n(1) IP 주소를 MAC 주소로 변환하는 프로토콜\n(2) 네트워크 장비 간의 경로 정보를 교환하여 최적 경로를 결정하는 프로토콜로, 거리 벡터 알고리즘을 사용하며 최대 홉 수가 15인 프로토콜\n(3) 데이터를 암호화하여 송수신하는 프로토콜로, HTTP에 SSL/TLS를 적용한 것",
+    "answer": "(1) ARP (Address Resolution Protocol)\n(2) RIP (Routing Information Protocol)\n(3) HTTPS (HTTP Secure)",
+    "keywords": ["ARP", "RIP", "HTTPS", "프로토콜", "네트워크", "라우팅"]
+  },
+  {
+    "year": "2024",
+    "session": "2회",
+    "number": 1,
+    "category": "프로그래밍",
+    "subcategory": "Java",
+    "question": "다음 Java 프로그램의 실행 결과를 쓰시오.\n\npublic class Main {\n    public static void main(String[] args) {\n        int[] arr = {3, 6, 9, 12, 15};\n        int result = 0;\n        for(int i = 0; i < arr.length; i++) {\n            if(arr[i] % 2 != 0) {\n                result += arr[i];\n            }\n        }\n        System.out.println(result);\n    }\n}",
+    "answer": "27",
+    "keywords": ["Java", "배열", "반복문", "조건문", "홀수"]
+  },
+  {
+    "year": "2024",
+    "session": "2회",
+    "number": 2,
+    "category": "데이터베이스",
+    "subcategory": "정규화",
+    "question": "데이터베이스 정규화에 대한 다음 설명에서 괄호 안에 알맞은 정규형을 쓰시오.\n(1) 릴레이션의 모든 속성 값이 원자값(Atomic Value)만으로 구성되어 있으면 ( ) 정규형이다.\n(2) ( ) 정규형이면서 기본키가 아닌 모든 속성이 기본키에 대해 완전 함수 종속이면 ( ) 정규형이다.\n(3) ( ) 정규형이면서 기본키가 아닌 모든 속성이 기본키에 대해 이행적 함수 종속이 아니면 ( ) 정규형이다.",
+    "answer": "(1) 제1정규형 (1NF)\n(2) 제1정규형(1NF), 제2정규형 (2NF)\n(3) 제2정규형(2NF), 제3정규형 (3NF)",
+    "keywords": ["정규화", "1NF", "2NF", "3NF", "함수 종속", "이행적 종속", "원자값"]
+  },
+  {
+    "year": "2024",
+    "session": "2회",
+    "number": 3,
+    "category": "소프트웨어 공학",
+    "subcategory": "개발 방법론",
+    "question": "다음은 애자일(Agile) 소프트웨어 개발 방법론에 대한 설명이다. 각 설명에 해당하는 방법론의 이름을 쓰시오.\n(1) 30일마다 동작 가능한 제품을 제공하는 것을 목표로 하며, 백로그(Backlog)를 기반으로 스프린트(Sprint) 단위로 개발하는 방법론\n(2) 고객의 참여와 개발 과정의 반복을 극대화하여 개발 생산성을 향상시키는 방법론으로, 짝 프로그래밍(Pair Programming), 테스트 주도 개발(TDD) 등의 실천 방법을 강조하는 방법론\n(3) 칸반 보드를 사용하여 업무를 시각화하고, 진행 중인 작업(WIP)의 수를 제한하여 흐름을 최적화하는 방법론",
+    "answer": "(1) 스크럼 (Scrum)\n(2) XP (eXtreme Programming)\n(3) 칸반 (Kanban)",
+    "keywords": ["애자일", "스크럼", "XP", "칸반", "스프린트", "백로그", "TDD", "짝 프로그래밍"]
+  },
+  {
+    "year": "2024",
+    "session": "2회",
+    "number": 4,
+    "category": "정보보안",
+    "subcategory": "공격 기법",
+    "question": "다음 설명에 해당하는 보안 공격 기법의 이름을 쓰시오.\n(1) 웹 페이지에 악성 스크립트를 삽입하여 사용자의 정보를 탈취하는 공격\n(2) 사용자가 의도하지 않은 요청을 웹 서버에 전송하게 하여 공격자가 원하는 행위를 수행하게 하는 공격\n(3) SQL 쿼리문에 악의적인 코드를 삽입하여 데이터베이스를 비정상적으로 조작하는 공격",
+    "answer": "(1) XSS (Cross-Site Scripting)\n(2) CSRF (Cross-Site Request Forgery)\n(3) SQL Injection (SQL 삽입)",
+    "keywords": ["XSS", "CSRF", "SQL Injection", "보안 공격", "웹 보안", "OWASP"]
+  },
+  {
+    "year": "2024",
+    "session": "2회",
+    "number": 5,
+    "category": "프로그래밍",
+    "subcategory": "Python",
+    "question": "다음 Python 프로그램의 실행 결과를 쓰시오.\n\ndef func(lst):\n    result = []\n    for item in lst:\n        if item not in result:\n            result.append(item)\n    return result\n\ndata = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3]\nprint(func(data))\nprint(len(func(data)))",
+    "answer": "[3, 1, 4, 5, 9, 2, 6]\n7",
+    "keywords": ["Python", "리스트", "중복 제거", "함수", "반복문"]
+  },
+  {
+    "year": "2023",
+    "session": "1회",
+    "number": 1,
+    "category": "소프트웨어 설계",
+    "subcategory": "UML",
+    "question": "UML(Unified Modeling Language) 다이어그램에 대한 다음 설명에서 해당하는 다이어그램의 종류를 쓰시오.\n(1) 시스템의 기능을 사용자 관점에서 표현한 다이어그램으로, 액터(Actor)와 유스케이스(Use Case)로 구성되는 다이어그램\n(2) 객체의 상태 변화를 나타내는 다이어그램으로, 이벤트에 의한 상태 전이를 표현하는 다이어그램\n(3) 시스템의 동적인 측면을 모델링하며, 객체 간의 메시지 교환을 시간 순서에 따라 표현하는 다이어그램",
+    "answer": "(1) 유스케이스 다이어그램 (Use Case Diagram)\n(2) 상태 다이어그램 (State Diagram)\n(3) 시퀀스 다이어그램 (Sequence Diagram)",
+    "keywords": ["UML", "유스케이스 다이어그램", "상태 다이어그램", "시퀀스 다이어그램", "액터"]
+  },
+  {
+    "year": "2023",
+    "session": "1회",
+    "number": 2,
+    "category": "데이터베이스",
+    "subcategory": "SQL",
+    "question": "다음 SQL문의 실행 결과를 쓰시오.\n\n[사원] 테이블\n| 사번 | 이름 | 부서 | 급여 |\n|------|------|------|------|\n| 101 | 김민수 | 개발 | 3000 |\n| 102 | 이지연 | 인사 | 2800 |\n| 103 | 박서준 | 개발 | 3500 |\n| 104 | 최유리 | 영업 | 2500 |\n| 105 | 정하늘 | 개발 | 4000 |\n\nSELECT 부서, MAX(급여) - MIN(급여) AS 급여차이\nFROM 사원\nGROUP BY 부서\nORDER BY 급여차이 DESC;",
+    "answer": "| 부서 | 급여차이 |\n|------|----------|\n| 개발 | 1000 |\n| 인사 | 0 |\n| 영업 | 0 |",
+    "keywords": ["SQL", "GROUP BY", "ORDER BY", "MAX", "MIN", "집계 함수"]
+  },
+  {
+    "year": "2023",
+    "session": "1회",
+    "number": 3,
+    "category": "프로그래밍",
+    "subcategory": "C언어",
+    "question": "다음 C 프로그램의 실행 결과를 쓰시오.\n\n#include <stdio.h>\nint main() {\n    int i, j;\n    for(i = 0; i < 5; i++) {\n        for(j = 0; j < i; j++) {\n            printf(\"*\");\n        }\n        printf(\"\\n\");\n    }\n    return 0;\n}",
+    "answer": "(빈 줄)\n*\n**\n***\n****",
+    "keywords": ["C언어", "이중 반복문", "중첩 for문", "별 찍기", "패턴 출력"]
+  },
+  {
+    "year": "2023",
+    "session": "1회",
+    "number": 4,
+    "category": "네트워크",
+    "subcategory": "OSI 7계층",
+    "question": "OSI 7계층에 대한 다음 설명에서 해당하는 계층의 이름을 쓰시오.\n(1) 데이터의 물리적 전송을 담당하며, 비트 스트림을 전기적 신호로 변환하는 계층\n(2) 종단 간(End-to-End) 신뢰성 있는 데이터 전송을 담당하며, 흐름 제어와 오류 제어를 수행하는 계층\n(3) 데이터의 형식 변환, 암호화, 압축 등을 담당하는 계층",
+    "answer": "(1) 물리 계층 (Physical Layer) - 1계층\n(2) 전송 계층 (Transport Layer) - 4계층\n(3) 표현 계층 (Presentation Layer) - 6계층",
+    "keywords": ["OSI 7계층", "물리 계층", "전송 계층", "표현 계층", "네트워크 계층"]
+  },
+  {
+    "year": "2023",
+    "session": "1회",
+    "number": 5,
+    "category": "소프트웨어 공학",
+    "subcategory": "결합도와 응집도",
+    "question": "모듈의 결합도(Coupling)에 대한 설명이다. 다음 설명에 해당하는 결합도 유형을 쓰시오.\n(1) 두 모듈이 매개변수(Parameter)를 통해 데이터를 교환하는 결합도 (가장 낮은 결합도)\n(2) 한 모듈이 다른 모듈의 내부 기능 및 그 내부 자료를 직접 참조하거나 수정하는 결합도 (가장 높은 결합도)\n(3) 두 모듈이 같은 전역 변수를 참조하는 결합도",
+    "answer": "(1) 자료 결합도 (Data Coupling)\n(2) 내용 결합도 (Content Coupling)\n(3) 공통 결합도 (Common Coupling)",
+    "keywords": ["결합도", "자료 결합도", "내용 결합도", "공통 결합도", "모듈", "응집도"]
+  },
+  {
+    "year": "2023",
+    "session": "2회",
+    "number": 1,
+    "category": "프로그래밍",
+    "subcategory": "Java",
+    "question": "다음 Java 프로그램의 실행 결과를 쓰시오.\n\nclass Parent {\n    int x = 10;\n    void display() {\n        System.out.println(\"Parent: \" + x);\n    }\n}\n\nclass Child extends Parent {\n    int x = 20;\n    void display() {\n        System.out.println(\"Child: \" + x);\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Parent obj = new Child();\n        obj.display();\n        System.out.println(obj.x);\n    }\n}",
+    "answer": "Child: 20\n10",
+    "keywords": ["Java", "상속", "오버라이딩", "다형성", "업캐스팅", "동적 바인딩"]
+  },
+  {
+    "year": "2023",
+    "session": "2회",
+    "number": 2,
+    "category": "데이터베이스",
+    "subcategory": "트랜잭션",
+    "question": "데이터베이스 트랜잭션의 특성인 ACID에 대해 각 특성의 이름과 의미를 서술하시오.",
+    "answer": "1. 원자성(Atomicity): 트랜잭션의 모든 연산이 완전히 수행되거나 전혀 수행되지 않아야 함 (All or Nothing)\n2. 일관성(Consistency): 트랜잭션 수행 전후로 데이터베이스가 일관된 상태를 유지해야 함\n3. 격리성(Isolation): 동시에 실행되는 트랜잭션들이 서로 영향을 미치지 않아야 함\n4. 지속성(Durability): 성공적으로 완료된 트랜잭션의 결과는 영구적으로 반영되어야 함",
+    "keywords": ["트랜잭션", "ACID", "원자성", "일관성", "격리성", "지속성", "데이터베이스"]
+  },
+  {
+    "year": "2023",
+    "session": "2회",
+    "number": 3,
+    "category": "소프트웨어 공학",
+    "subcategory": "형상 관리",
+    "question": "소프트웨어 형상 관리(SCM: Software Configuration Management)에서 사용되는 다음 용어에 대해 설명하시오.\n(1) 체크인(Check-in)\n(2) 체크아웃(Check-out)\n(3) 커밋(Commit)\n(4) 베이스라인(Baseline)",
+    "answer": "(1) 체크인(Check-in): 수정한 파일을 저장소에 반영하는 작업\n(2) 체크아웃(Check-out): 저장소에서 파일을 로컬로 가져오는 작업\n(3) 커밋(Commit): 변경 사항을 저장소에 확정하여 기록하는 작업\n(4) 베이스라인(Baseline): 개발 과정의 특정 시점에서 공식적으로 합의된 산출물의 기준",
+    "keywords": ["형상 관리", "SCM", "체크인", "체크아웃", "커밋", "베이스라인", "버전 관리"]
+  },
+  {
+    "year": "2023",
+    "session": "2회",
+    "number": 4,
+    "category": "정보보안",
+    "subcategory": "암호화",
+    "question": "다음 설명에 해당하는 암호화 방식 또는 알고리즘의 이름을 쓰시오.\n(1) 암호화와 복호화에 같은 키를 사용하는 방식. 대표적으로 AES, DES가 있음\n(2) 암호화와 복호화에 서로 다른 키(공개키, 개인키)를 사용하는 방식. 대표적으로 RSA가 있음\n(3) 임의의 길이의 데이터를 고정된 길이의 데이터로 매핑하는 함수. 대표적으로 SHA-256이 있음",
+    "answer": "(1) 대칭키 암호화 (Symmetric Key Encryption)\n(2) 비대칭키 암호화 / 공개키 암호화 (Asymmetric Key Encryption / Public Key Encryption)\n(3) 해시 함수 (Hash Function)",
+    "keywords": ["대칭키", "비대칭키", "공개키", "해시 함수", "AES", "RSA", "SHA", "암호화"]
+  },
+  {
+    "year": "2023",
+    "session": "2회",
+    "number": 5,
+    "category": "프로그래밍",
+    "subcategory": "Python",
+    "question": "다음 Python 프로그램의 실행 결과를 쓰시오.\n\nclass Calculator:\n    def __init__(self):\n        self.result = 0\n    \n    def add(self, n):\n        self.result += n\n        return self\n    \n    def sub(self, n):\n        self.result -= n\n        return self\n\ncalc = Calculator()\ncalc.add(5).add(3).sub(2)\nprint(calc.result)",
+    "answer": "6",
+    "keywords": ["Python", "클래스", "메서드 체이닝", "객체지향", "self"]
+  },
+  {
+    "year": "2023",
+    "session": "3회",
+    "number": 1,
+    "category": "소프트웨어 설계",
+    "subcategory": "요구사항",
+    "question": "소프트웨어 요구사항에 대한 다음 설명에서 괄호 안에 알맞은 용어를 쓰시오.\n(1) ( )은/는 사용자가 시스템을 통해 수행하고자 하는 기능에 대한 요구사항이다.\n(2) ( )은/는 시스템의 성능, 보안, 사용성, 신뢰성 등 품질에 대한 요구사항이다.\n(3) ( )은/는 요구사항의 모호성을 제거하고 일관성을 확보하기 위해 요구사항을 분석하여 문서화하는 것이다.",
+    "answer": "(1) 기능적 요구사항 (Functional Requirement)\n(2) 비기능적 요구사항 (Non-Functional Requirement)\n(3) 요구사항 명세 (Requirement Specification)",
+    "keywords": ["기능적 요구사항", "비기능적 요구사항", "요구사항 명세", "요구사항 분석"]
+  },
+  {
+    "year": "2023",
+    "session": "3회",
+    "number": 2,
+    "category": "데이터베이스",
+    "subcategory": "SQL",
+    "question": "다음 SQL문에서 괄호 안에 알맞은 명령어를 쓰시오.\n(1) 테이블에서 특정 조건에 맞는 데이터를 삭제하려면 ( ) 문을 사용한다.\n(2) 테이블의 구조를 변경(컬럼 추가, 삭제, 수정)하려면 ( ) 문을 사용한다.\n(3) 테이블의 모든 데이터를 삭제하되 테이블 구조는 유지하고, 로그를 남기지 않으며, 자동 커밋되는 명령은 ( )이다.",
+    "answer": "(1) DELETE\n(2) ALTER\n(3) TRUNCATE",
+    "keywords": ["SQL", "DELETE", "ALTER", "TRUNCATE", "DDL", "DML", "테이블 관리"]
+  },
+  {
+    "year": "2023",
+    "session": "3회",
+    "number": 3,
+    "category": "프로그래밍",
+    "subcategory": "C언어",
+    "question": "다음 C 프로그램의 실행 결과를 쓰시오.\n\n#include <stdio.h>\nvoid swap(int *a, int *b) {\n    int temp = *a;\n    *a = *b;\n    *b = temp;\n}\n\nint main() {\n    int x = 10, y = 20;\n    swap(&x, &y);\n    printf(\"x=%d, y=%d\\n\", x, y);\n    return 0;\n}",
+    "answer": "x=20, y=10",
+    "keywords": ["C언어", "포인터", "Call by Reference", "swap", "함수"]
+  },
+  {
+    "year": "2023",
+    "session": "3회",
+    "number": 4,
+    "category": "네트워크",
+    "subcategory": "IP주소",
+    "question": "다음 설명에 해당하는 네트워크 용어를 쓰시오.\n(1) IPv4 주소 고갈 문제를 해결하기 위해 개발된 128비트 주소 체계\n(2) 사설 IP 주소를 공인 IP 주소로 변환하는 기술\n(3) 하나의 공인 IP를 여러 사설 IP가 공유할 수 있도록 포트 번호를 이용해 변환하는 기술",
+    "answer": "(1) IPv6\n(2) NAT (Network Address Translation)\n(3) PAT (Port Address Translation) 또는 NAPT (Network Address Port Translation)",
+    "keywords": ["IPv6", "NAT", "PAT", "NAPT", "IP주소", "사설IP", "공인IP"]
+  },
+  {
+    "year": "2023",
+    "session": "3회",
+    "number": 5,
+    "category": "소프트웨어 공학",
+    "subcategory": "인터페이스",
+    "question": "다음은 인터페이스 구현 검증 도구에 대한 설명이다. 해당하는 도구의 이름을 쓰시오.\n(1) 서비스 호출, 컴포넌트 재사용 등 다양한 환경에서 테스트를 수행할 수 있는 도구로, 다양한 프로토콜(HTTP, SOAP, REST 등)을 지원하는 도구\n(2) 웹 애플리케이션의 기능 테스트를 자동화하는 도구로, 브라우저에서의 사용자 행위를 기록하여 재생할 수 있는 도구\n(3) 스텁(Stub)과 드라이버(Driver)를 사용하여 모듈 간 인터페이스를 테스트하는 방법",
+    "answer": "(1) xUnit\n(2) Selenium\n(3) 통합 테스트 (Integration Test)",
+    "keywords": ["xUnit", "Selenium", "통합 테스트", "스텁", "드라이버", "인터페이스 테스트"]
+  },
+  {
+    "year": "2022",
+    "session": "1회",
+    "number": 1,
+    "category": "소프트웨어 설계",
+    "subcategory": "디자인 패턴",
+    "question": "다음 설명에 해당하는 GoF 디자인 패턴의 이름을 쓰시오.\n(1) 클래스의 인스턴스가 하나만 생성되도록 보장하고, 어디서든 그 인스턴스에 접근할 수 있게 하는 패턴\n(2) 기존 객체를 복제하여 새로운 객체를 생성하는 패턴\n(3) 객체의 구조를 변경하지 않으면서 새로운 기능을 추가할 수 있게 하는 패턴으로, 이중 디스패치를 활용하는 패턴",
+    "answer": "(1) Singleton (싱글톤)\n(2) Prototype (프로토타입)\n(3) Visitor (방문자)",
+    "keywords": ["디자인 패턴", "Singleton", "Prototype", "Visitor", "GoF", "생성 패턴", "행위 패턴"]
+  },
+  {
+    "year": "2022",
+    "session": "1회",
+    "number": 2,
+    "category": "프로그래밍",
+    "subcategory": "Python",
+    "question": "다음 Python 프로그램의 실행 결과를 쓰시오.\n\na = {'A': 1, 'B': 2, 'C': 3}\nb = {v: k for k, v in a.items()}\nprint(b)\nprint(b[2])",
+    "answer": "{1: 'A', 2: 'B', 3: 'C'}\nB",
+    "keywords": ["Python", "딕셔너리", "딕셔너리 컴프리헨션", "items", "key-value"]
+  },
+  {
+    "year": "2022",
+    "session": "1회",
+    "number": 3,
+    "category": "데이터베이스",
+    "subcategory": "관계대수",
+    "question": "관계대수 연산에 대한 다음 설명에서 해당하는 연산의 기호와 이름을 쓰시오.\n(1) 릴레이션에서 조건을 만족하는 튜플(행)을 선택하는 연산\n(2) 릴레이션에서 특정 속성(열)만을 추출하는 연산\n(3) 두 릴레이션에서 공통 속성을 기준으로 튜플을 결합하는 연산",
+    "answer": "(1) 셀렉션 (Selection, σ)\n(2) 프로젝션 (Projection, π)\n(3) 조인 (Join, ⋈)",
+    "keywords": ["관계대수", "셀렉션", "프로젝션", "조인", "릴레이션", "튜플", "속성"]
+  },
+  {
+    "year": "2022",
+    "session": "1회",
+    "number": 4,
+    "category": "정보보안",
+    "subcategory": "접근 제어",
+    "question": "접근 제어 모델에 대한 다음 설명에서 해당하는 모델의 이름을 쓰시오.\n(1) 주체(사용자)와 객체(자원)의 등급을 비교하여 접근을 제어하는 모델. 군사적 보안 등급 체계에 기반하며, 기밀성을 강조하는 모델\n(2) 자원의 소유자가 다른 사용자에게 접근 권한을 부여할 수 있는 모델\n(3) 사용자의 역할(Role)에 기반하여 접근을 제어하는 모델",
+    "answer": "(1) MAC (Mandatory Access Control, 강제적 접근 제어)\n(2) DAC (Discretionary Access Control, 임의적 접근 제어)\n(3) RBAC (Role-Based Access Control, 역할 기반 접근 제어)",
+    "keywords": ["MAC", "DAC", "RBAC", "접근 제어", "보안", "강제적 접근 제어", "역할 기반"]
+  },
+  {
+    "year": "2022",
+    "session": "1회",
+    "number": 5,
+    "category": "프로그래밍",
+    "subcategory": "Java",
+    "question": "다음 Java 프로그램의 실행 결과를 쓰시오.\n\npublic class Main {\n    static int[] counter = {0};\n    \n    static int fibonacci(int n) {\n        counter[0]++;\n        if(n <= 1) return n;\n        return fibonacci(n - 1) + fibonacci(n - 2);\n    }\n    \n    public static void main(String[] args) {\n        int result = fibonacci(6);\n        System.out.println(result);\n        System.out.println(counter[0]);\n    }\n}",
+    "answer": "8\n25",
+    "keywords": ["Java", "재귀", "피보나치", "재귀 호출", "함수 호출 횟수"]
+  },
+  {
+    "year": "2022",
+    "session": "2회",
+    "number": 1,
+    "category": "소프트웨어 공학",
+    "subcategory": "테스트",
+    "question": "소프트웨어 테스트에서 블랙박스 테스트 기법에 대한 설명이다. 각 설명에 해당하는 기법의 이름을 쓰시오.\n(1) 입력 데이터를 유사한 특성을 가진 그룹으로 나누어 각 그룹에서 대표값을 선택하여 테스트하는 기법\n(2) 입력값의 경계에서 오류가 발생할 가능성이 높다는 점을 이용하여, 경계값과 그 근처의 값을 테스트하는 기법\n(3) 입력 조건들의 가능한 모든 조합을 테이블로 만들어 테스트하는 기법",
+    "answer": "(1) 동등 분할 (Equivalence Partitioning)\n(2) 경계값 분석 (Boundary Value Analysis)\n(3) 결정 테이블 (Decision Table Testing)",
+    "keywords": ["블랙박스 테스트", "동등 분할", "경계값 분석", "결정 테이블", "테스트 기법"]
+  },
+  {
+    "year": "2022",
+    "session": "2회",
+    "number": 2,
+    "category": "데이터베이스",
+    "subcategory": "SQL",
+    "question": "다음 SQL문의 실행 결과를 쓰시오.\n\n[성적] 테이블\n| 학번 | 과목 | 점수 |\n|------|------|------|\n| 100 | 국어 | 85 |\n| 100 | 수학 | 90 |\n| 200 | 국어 | 70 |\n| 200 | 수학 | 75 |\n| 300 | 국어 | 95 |\n\nSELECT 학번, SUM(점수) AS 총점\nFROM 성적\nWHERE 점수 >= 80\nGROUP BY 학번\nHAVING SUM(점수) >= 170\nORDER BY 총점 DESC;",
+    "answer": "| 학번 | 총점 |\n|------|------|\n| 100 | 175 |",
+    "keywords": ["SQL", "WHERE", "GROUP BY", "HAVING", "SUM", "ORDER BY"]
+  },
+  {
+    "year": "2022",
+    "session": "2회",
+    "number": 3,
+    "category": "소프트웨어 설계",
+    "subcategory": "아키텍처",
+    "question": "소프트웨어 아키텍처 스타일에 대한 다음 설명에서 해당하는 스타일의 이름을 쓰시오.\n(1) 시스템을 독립적인 계층으로 구분하여, 각 계층이 하위 계층의 서비스를 이용하는 구조\n(2) 데이터의 입력, 처리, 출력이 파이프(Pipe)와 필터(Filter)의 연결로 구성되는 구조\n(3) 중앙의 데이터 저장소(Repository)를 중심으로 여러 서브시스템이 데이터를 공유하는 구조",
+    "answer": "(1) 계층 구조 (Layered Architecture)\n(2) 파이프-필터 구조 (Pipe-Filter Architecture)\n(3) 저장소 구조 (Repository Architecture)",
+    "keywords": ["아키텍처", "계층 구조", "파이프-필터", "저장소 구조", "클라이언트-서버", "MVC"]
+  },
+  {
+    "year": "2022",
+    "session": "2회",
+    "number": 4,
+    "category": "프로그래밍",
+    "subcategory": "C언어",
+    "question": "다음 C 프로그램의 실행 결과를 쓰시오.\n\n#include <stdio.h>\nint main() {\n    char str[] = \"Hello\";\n    int i = 0;\n    while(str[i] != '\\0') {\n        if(str[i] >= 'a' && str[i] <= 'z') {\n            str[i] = str[i] - 32;\n        }\n        i++;\n    }\n    printf(\"%s\\n\", str);\n    return 0;\n}",
+    "answer": "HELLO",
+    "keywords": ["C언어", "문자열", "ASCII", "대소문자 변환", "배열"]
+  },
+  {
+    "year": "2022",
+    "session": "2회",
+    "number": 5,
+    "category": "네트워크",
+    "subcategory": "보안 프로토콜",
+    "question": "다음 설명에 해당하는 네트워크 보안 기술 또는 프로토콜의 이름을 쓰시오.\n(1) 인터넷을 통해 가상의 사설 네트워크를 구축하여 안전하게 데이터를 전송하는 기술\n(2) 네트워크 계층에서 보안 서비스를 제공하는 프로토콜 모음으로, AH와 ESP를 포함하는 프로토콜\n(3) 방화벽의 일종으로, 패킷의 내용을 분석하여 공격을 탐지하고 차단하는 시스템",
+    "answer": "(1) VPN (Virtual Private Network)\n(2) IPSec (IP Security)\n(3) IPS (Intrusion Prevention System, 침입 방지 시스템)",
+    "keywords": ["VPN", "IPSec", "IPS", "방화벽", "네트워크 보안", "침입 방지"]
+  },
+  {
+    "year": "2022",
+    "session": "3회",
+    "number": 1,
+    "category": "프로그래밍",
+    "subcategory": "Python",
+    "question": "다음 Python 프로그램의 실행 결과를 쓰시오.\n\ndef solution(n):\n    stack = []\n    while n > 0:\n        stack.append(n % 2)\n        n = n // 2\n    result = ''\n    while stack:\n        result += str(stack.pop())\n    return result\n\nprint(solution(13))",
+    "answer": "1101",
+    "keywords": ["Python", "스택", "2진수 변환", "나머지 연산", "자료구조"]
+  },
+  {
+    "year": "2022",
+    "session": "3회",
+    "number": 2,
+    "category": "데이터베이스",
+    "subcategory": "인덱스",
+    "question": "데이터베이스 인덱스(Index)에 대한 다음 설명에서 괄호 안에 알맞은 용어를 쓰시오.\n(1) ( ) 인덱스는 데이터가 정렬된 순서와 인덱스의 순서가 동일한 인덱스이다. 테이블당 하나만 생성 가능하다.\n(2) ( ) 인덱스는 데이터의 물리적 정렬 순서와 관계없이 별도의 인덱스를 생성하는 것이다. 테이블당 여러 개 생성 가능하다.\n(3) 인덱스는 주로 ( ) 자료구조를 사용하여 검색 성능을 향상시킨다.",
+    "answer": "(1) 클러스터드 (Clustered)\n(2) 넌클러스터드 (Non-Clustered)\n(3) B-Tree (B-트리)",
+    "keywords": ["인덱스", "클러스터드", "넌클러스터드", "B-Tree", "데이터베이스 성능"]
+  },
+  {
+    "year": "2022",
+    "session": "3회",
+    "number": 3,
+    "category": "소프트웨어 공학",
+    "subcategory": "프로세스",
+    "question": "소프트웨어 개발 프로세스 모델에 대한 설명이다. 해당하는 모델의 이름을 쓰시오.\n(1) 요구사항 분석 → 설계 → 구현 → 테스트 → 유지보수의 단계를 순차적으로 진행하는 모델\n(2) 위험 분석을 중심으로 계획 수립, 위험 분석, 개발, 고객 평가의 4단계를 반복하는 모델\n(3) 사용자의 요구사항을 빠르게 구현한 시제품(Prototype)을 만들어 피드백을 받는 모델",
+    "answer": "(1) 폭포수 모델 (Waterfall Model)\n(2) 나선형 모델 (Spiral Model)\n(3) 프로토타입 모델 (Prototype Model)",
+    "keywords": ["폭포수 모델", "나선형 모델", "프로토타입", "개발 프로세스", "SDLC"]
+  },
+  {
+    "year": "2022",
+    "session": "3회",
+    "number": 4,
+    "category": "네트워크",
+    "subcategory": "라우팅",
+    "question": "라우팅 프로토콜에 대한 다음 설명에서 해당하는 프로토콜의 이름을 쓰시오.\n(1) 거리 벡터(Distance Vector) 알고리즘을 사용하며, 최대 홉 수가 15인 내부 라우팅 프로토콜\n(2) 링크 상태(Link State) 알고리즘을 사용하며, 다익스트라(Dijkstra) 알고리즘으로 최단 경로를 계산하는 내부 라우팅 프로토콜\n(3) 자율 시스템(AS) 간의 라우팅을 담당하는 외부 라우팅 프로토콜",
+    "answer": "(1) RIP (Routing Information Protocol)\n(2) OSPF (Open Shortest Path First)\n(3) BGP (Border Gateway Protocol)",
+    "keywords": ["RIP", "OSPF", "BGP", "라우팅", "거리 벡터", "링크 상태", "IGP", "EGP"]
+  },
+  {
+    "year": "2022",
+    "session": "3회",
+    "number": 5,
+    "category": "정보보안",
+    "subcategory": "보안 솔루션",
+    "question": "다음 설명에 해당하는 보안 솔루션의 이름을 쓰시오.\n(1) 네트워크 트래픽을 모니터링하여 비정상적인 활동이나 공격을 탐지하는 시스템\n(2) 데이터베이스에 접근하는 사용자의 활동을 모니터링하고 감사하여 비인가 접근을 탐지하는 솔루션\n(3) 개인정보나 기밀 정보가 조직 외부로 유출되는 것을 방지하는 솔루션",
+    "answer": "(1) IDS (Intrusion Detection System, 침입 탐지 시스템)\n(2) DAM (Database Activity Monitoring, 데이터베이스 활동 모니터링)\n(3) DLP (Data Loss Prevention, 데이터 유출 방지)",
+    "keywords": ["IDS", "DAM", "DLP", "보안 솔루션", "침입 탐지", "데이터 유출 방지"]
+  }
+]
